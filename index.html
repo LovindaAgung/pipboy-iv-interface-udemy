@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pip boy Application</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.style.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <div id="menuBar" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto nav nav-tabs" role="tablist">
+                    <li class="nav-item ">
+                        <a class="nav-link active" href="#statMenu" data-toggle="tab" data-defaultTab="status" role="tab">stat</a>
+                        
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#invMenu" data-toggle="tab" data-defaultTab="status2" role="tab">inv</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" role="tab">data</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" role="tab">map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" role="tab">radio</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="statMenu" class="tab-pane active" role="tabpanel">
+                        <ul class="lvl-2 nav nav-tabs">
+                            <li class="nav-item">
+                                <a href="#status" class="nav-link active" data-toggle="tab">status</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#special" class="nav-link" data-toggle="tab">special</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#perks" class="nav-link" data-toggle="tab">perks</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="invMenu" class="tab-pane" role="tabpanel">
+                        <ul class="lvl-2 nav nav-tabs">
+                            <li class="nav-item">
+                                <a href="#status2" class="nav-link" data-toggle="tab">status2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#special2" class="nav-link" data-toggle="tab">special2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#perks2" class="nav-link" data-toggle="tab">perks2</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div id="mainContent" class="tab-content container mt-5">
+            <div id="status" class="tab-pane active" role="tabpanel">status</div>
+            <div id="special" class="tab-pane" role="tabpanel">special</div>
+            <div id="perks" class="tab-pane" role="tabpanel">perks</div>
+            <div id="status2" class="tab-pane" role="tabpanel">status2</div>
+            <div id="special2" class="tab-pane" role="tabpanel">special2</div>
+            <div id="perks2" class="tab-pane" role="tabpanel">perks2</div>
+        </div>
+    </main>
+
+    <footer class="">
+        <div class="row container mx-auto">
+            <div class="col-sm-3">
+                HP 90/90
+            </div>
+            <div class="col-sm-6">
+                <div class="level-health">
+                    <div>
+                        level 1
+                    </div>
+                    <div class="flex-fill">
+                        <div class="health">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 text-right">
+                AP 70/70
+            </div>
+        </div>
+    </footer>
+
+    <!-- <div class="container d-none">
+        <div class="row">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="#status" class="nav-link" data-toggle="tab">status</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#special" class="nav-link" data-toggle="tab">special</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#perks" class="nav-link" data-toggle="tab">perks</a>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.main.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+@import 'color';
+body{
+    color:var(--text-100);
+    font-weight: 900;
+    background: var(--background);
+}
+.navbar{
+    border-bottom: 2px solid var(--text-100);
+    margin: 0 30px;
+    padding-top: 0;
+    padding-bottom: 0;   
+}
+
+#menuBar{
+
+    .nav-link{
+        text-transform:uppercase;
+        color:var(--text-100);
+    }
+
+    > *:first-child .nav-link{
+        &.active{
+            border: 0;
+            z-index: 1;
+
+            // make bracket
+            &::after{
+                // must over 100% to out-width parent 
+                $width : 130%;
+
+                // 50% ~ 80%
+                $height : 60%;
+
+
+                content: '';
+                display: block;
+                width: $width;
+                height: $height;
+                position: absolute;
+                left: (100% - $width) / 2;
+                bottom: -10%;
+                border: 2px solid;
+                border-bottom-color: transparent;
+                z-index: -2;
+                background: var(--background);
+            }
+            // make cover brancket cutout
+            &::before{
+                background: var(--background);
+                content: '';
+                display: block;
+                width: 100%;
+                height: 75%;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+            }
+        }
+    }
+    .nav-link.active{
+        background: none;
+        border-color: transparent;
+        position: relative;
+    }
+
+    .navbar-nav{
+        display: -ms-flexbox;
+        display: flex;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        justify-content: space-between;
+        /* align-items: center; */
+        /* align-self: center; */
+        flex: 1 1;
+    }
+}
+
+.navbar-collapse{
+    position: relative;
+
+    >.nav-tabs{
+        border:none;
+    }
+
+    .nav-tabs{
+        :hover{
+            border-color: transparent;
+        }
+    }
+    
+    .lvl-2{
+        position: absolute;
+        top:100%;
+        left: 0;
+        margin-top: 10px;
+
+        &.nav-tabs{
+            border: none;
+            flex-wrap: nowrap;
+        }
+
+        .nav-link{
+            font-weight: 500;
+        }
+    }
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 10px;
+
+    .level-health{
+        display: flex;
+        column-gap:15px;
+    }
+
+    .health{
+        height: 20px;
+        flex:1 1;
+        display: block;
+        border: 2px solid var(--text-100);
+        background: var(--text-100);
+        background: linear-gradient(90deg, var(--text-100) 90%, rgba(29,38,113,0) 90%);
+    }
+}
