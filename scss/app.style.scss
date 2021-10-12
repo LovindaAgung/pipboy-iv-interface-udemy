@@ -1,4 +1,21 @@
+@use 'sass:color';
 @import 'color';
+@import 'util';
+
+
+%bar{            
+    height: 20px;
+    flex:1 1;
+    display: block;
+    border: 2px solid var(--text-100);
+    background: var(--text-100);
+    background: linear-gradient(90deg, var(--text-100) 90%, rgba(29,38,113,0) 90%);
+}
+
+%green-theme-filter{
+    filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(7) brightness(1) contrast(2);
+}
+
 body{
     color:var(--text-100);
     font-weight: 900;
@@ -120,6 +137,17 @@ body{
 
         .nav-link{
             font-weight: 500;
+            opacity: .3;
+            transition: all .5s;
+
+            &.active{
+                opacity: 1;
+            }
+
+            &.adjacent{
+                opacity: .6;
+            }
+
         }
     }
 }
@@ -128,19 +156,68 @@ footer{
     position: fixed;
     bottom: 0;
     width: 100%;
-    margin: 10px;
-
+    padding: 10px 30px;
+    
+    > div{
+        
+        >div{
+            padding: 10px 0;
+            background: rgba(var(--hex-text-100),.15);
+        }
+    }
+    
     .level-health{
         display: flex;
         column-gap:15px;
     }
 
     .health{
-        height: 20px;
-        flex:1 1;
-        display: block;
-        border: 2px solid var(--text-100);
-        background: var(--text-100);
-        background: linear-gradient(90deg, var(--text-100) 90%, rgba(29,38,113,0) 90%);
+        @extend %bar;
+    }
+}
+
+#pipBoyMascot{
+    // filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(7) brightness(1) contrast(2);
+    @extend %green-theme-filter;
+
+    max-height: 400px;
+}
+
+.stat-wrapper{
+    max-width: 70px;
+    width: 100%;
+}
+.stat-bar{
+    @extend %bar;
+    height: 10px;
+}
+
+#adventureStat{
+    column-gap:10px;
+    
+    img{
+        @extend %green-theme-filter;
+
+        max-width: 100px;
+
+        &.icon-sm{
+            max-width: 32px;
+        }
+    }
+    
+    >div{
+        column-gap:10px;
+        
+        >div{
+            padding:10px;
+            height: 100%;
+            background: rgba(var(--hex-text-100),.15);
+            justify-content: space-around;
+        }
+    }
+    
+    div{
+        padding:10px;
+        align-items: center;
     }
 }

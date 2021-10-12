@@ -1,0 +1,19 @@
+$gap-1:10px;
+
+.gap-1{
+    gap: $gap-1;
+}
+
+.row-gap-1{
+    row-gap: $gap-1;
+}
+
+.col-gap-1{
+    column-gap: $gap-1;
+}
+
+.flex-1-1{
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 0%;
+}

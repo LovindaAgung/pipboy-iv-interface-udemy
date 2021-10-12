@@ -20,10 +20,10 @@
                         
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="#invMenu" data-toggle="tab" data-defaultTab="status2" role="tab">inv</a>
+                        <a class="nav-link" href="#invMenu" data-toggle="tab" data-defaultTab="weapon" role="tab">inv</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" role="tab">data</a>
+                        <a class="nav-link" href="#dataMenu" data-toggle="tab" data-defaultTab="workshop" role="tab">data</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" role="tab">map</a>
@@ -59,6 +59,19 @@
                             </li>
                         </ul>
                     </div>
+                    <div id="dataMenu" class="tab-pane" role="tabpanel">
+                        <ul class="lvl-2 nav nav-tabs">
+                            <li class="nav-item">
+                                <a href="#quest" class="nav-link" data-toggle="tab">quest</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#workshop" class="nav-link" data-toggle="tab">workshop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#stats" class="nav-link" data-toggle="tab">stats</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,7 +79,81 @@
 
     <main>
         <div id="mainContent" class="tab-content container mt-5">
-            <div id="status" class="tab-pane active" role="tabpanel">status</div>
+            <div id="status" class="tab-pane active" role="tabpanel">
+                <div class="d-flex flex-column">
+                    <div class="d-flex justify-content-center">
+                        <div class="stat-wrapper">
+                            <div class="stat-bar" data-current-stat="1" data-max-stat="10">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center mt-3">
+                        <div class="w-100 d-flex flex-column justify-content-around align-items-end">
+                            <div class="stat-wrapper">
+                                <div class="stat-bar" data-current-stat="2" data-max-stat="10">
+    
+                                </div>
+                            </div>
+                            <div class="stat-wrapper">
+                                <div class="stat-bar" data-current-stat="3" data-max-stat="10">
+    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center w-100">
+                            <img class="img-fluid" id="pipBoyMascot" src=".\asset\img\pipboy.png" alt="">
+                        </div>
+
+                        <div class="w-100 d-flex flex-column justify-content-around align-items-start">
+                            <div class="stat-wrapper">
+                                <div class="stat-bar" data-current-stat="4" data-max-stat="10">
+    
+                                </div>
+                            </div>
+                            <div class="stat-wrapper">
+                                <div class="stat-bar" data-current-stat="5" data-max-stat="10">
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class="stat-wrapper">
+                            <div class="stat-bar" data-current-stat="6" data-max-stat="10">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="adventureStat" class="d-flex justify-content-around mt-4 mx-auto w-50">
+                    <div class="d-flex">
+                        <div class="d-flex">
+                            <img class="img-fluid" src="/asset/img/gun.png" alt="">
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div><img class="img-fluid icon-sm" src="/asset/img/crosshair.png" alt=""></div>
+                            <div>1</div>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex">
+                        <div class="d-flex">
+                            <img class="img-fluid" src="/asset/img/helmet.png" alt="">
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div><img class="img-fluid icon-sm" src="/asset/img/energy.png" alt=""></div>
+                            <div>2</div>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div><img class="img-fluid icon-sm" src="/asset/img/radiation.png" alt=""></div>
+                            <div>3</div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
             <div id="special" class="tab-pane" role="tabpanel">special</div>
             <div id="perks" class="tab-pane" role="tabpanel">perks</div>
             <div id="weapon" class="tab-pane" role="tabpanel">weapon</div>
@@ -76,7 +163,7 @@
     </main>
 
     <footer class="">
-        <div class="row container mx-auto">
+        <div class="row mx-auto col-gap-1 flex-nowrap">
             <div class="col-sm-3">
                 HP <span id="currentHealth">542</span>/<span id="maxHealth">2634</span>
             </div>
@@ -86,7 +173,7 @@
                         level 1
                     </div>
                     <div class="flex-fill">
-                        <div class="health">
+                        <div class="health" data-current-hp="542" data-max-hp="2634">
                         </div>
                     </div>
                 </div>
